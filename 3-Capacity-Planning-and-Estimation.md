@@ -1,3 +1,5 @@
+Some important numbers:
+
 ![image](https://github.com/user-attachments/assets/7dac65dc-a582-4ea1-97da-71d8b4636b63)
 
 ### Capacity Planning and Estimation: How Much Data Does YouTube Store Daily?
