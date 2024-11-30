@@ -1,4 +1,4 @@
-### How to Avoid a Single Point of Failure (SPOF) in Distributed Systems ✅
+### How to Avoid a Single Point of Failure (SPOF) in Distributed Systems!
 
 A **Single Point of Failure (SPOF)** is a critical part of a system that, if it fails, can bring down the entire system. Preventing SPOFs is crucial for ensuring **high availability** and **resilience** in distributed systems.
 
