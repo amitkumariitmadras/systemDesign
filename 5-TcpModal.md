@@ -1,7 +1,7 @@
 ![image](https://github.com/user-attachments/assets/7a33587c-5d15-4e0e-a860-734d592c171e)
 
 **TCP/IP Model Overview**  
-The **TCP/IP** model, developed by the Department of Defense (DoD), is the foundation for communication on the internet. It consists of four layers, each responsible for different aspects of network communication.
+The **TCP/IP** model, developed by the Department of Defense (DoD), is the foundation for communication on the internet. It consists of 5 layers, each responsible for different aspects of network communication.
 
 ---
 
