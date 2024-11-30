@@ -59,6 +59,20 @@ Client Request --> Hash Function --> Route to Server
     ...
 ```
 
+```
+Hash Ring (0 to max value):
+   |----|----|----|----|----|----|----|
+    0   25f3   53c4   67ab   b93c   Max
+
+Server Hashes:
+  S1: 25f3
+  S2: 67ab
+  S3: b93c
+
+Request Hash:
+  client1 --> 53c4 --> assigned to S2
+```
+
 - **Requests are routed** to servers (S1, S2, S3) based on their hashed value.
 - **Consistency**: If a server is added or removed, only a small portion of requests are rerouted.
 
