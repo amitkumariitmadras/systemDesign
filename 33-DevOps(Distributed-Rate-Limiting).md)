@@ -1,0 +1,38 @@
+### Distributed Rate Limiting (Short and Concise)
+
+**Distributed Rate Limiting** controls how many requests a service can handle within a time frame, preventing overload in distributed systems.
+
+#### **Key Points**:
+1. **Purpose**: 
+   - Limits requests per user or service to prevent server overload.
+   
+2. **Types**:
+   - **Token Bucket**: Users have a "bucket" of tokens, and each request consumes one token.
+   - **Leaky Bucket**: Requests are processed at a fixed rate.
+   - **Fixed Window**: Fixed intervals (e.g., 100 requests per minute).
+   - **Sliding Window**: Flexible rate limiting based on time.
+
+3. **Challenges**:
+   - **Consistency**: Ensure rate limits are synchronized across services.
+   - **Latency**: Minimize delays in applying limits.
+   - **Scaling**: Efficient tracking across multiple instances.
+
+4. **Common Tool**:
+   - **Redis**: A distributed cache for tracking requests globally.
+
+#### **Example**:
+```plaintext
+    +-------------+     +------------+     +-------------+
+    | Service A   | --> | Redis Cache| --> | Service B   |
+    +-------------+     +------------+     +-------------+
+          |                  |                   |
+          v                  v                   v
+   Check rate limit     Global request tracking --> Response
+```
+
+#### **Best Practices**:
+- Use **Redis** for global tracking.
+- Apply **Exponential Backoff** to retry after rate limit exceeded.
+
+#### **Conclusion**:
+Distributed rate limiting ensures fair resource usage, prevents overload, and ensures scalability in microservices or cloud systems.
