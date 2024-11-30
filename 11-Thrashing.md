@@ -3,6 +3,8 @@
 **Definition**:  
 Thrashing occurs when the system spends more time swapping pages in and out of memory than executing processes, causing **severe CPU utilization drops**.
 
+![image](https://github.com/user-attachments/assets/4c858468-636a-4f62-8915-ffbbddf9165e)
+
 ---
 
 ### **Why Does Thrashing Happen?**
