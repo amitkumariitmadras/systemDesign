@@ -63,6 +63,16 @@
 
 ---
 
+### **Key Difference**:
+
+| **Aspect**                  | **False Positive**                                             | **False Negative**                                            |
+|-----------------------------|---------------------------------------------------------------|---------------------------------------------------------------|
+| **Definition**               | Incorrectly says an element is in the set when it’s not.      | Incorrectly says an element is not in the set when it is.     |
+| **Bloom Filter Behavior**    | Can occur, meaning the filter might say an element is in the set even if it’s not. | Does not happen in Bloom filters — if an element is in the set, the filter will always return **true**. |
+| **Result**                   | Query might return **true** for an element that wasn't added. | Query might return **false** for an element that was added.    |
+
+---
+
 ### **Applications**
 - **Caching systems**: Checking if an object is in the cache before querying a database.
 - **Distributed systems**: To check if a data item is present in multiple nodes (e.g., Apache HBase).
