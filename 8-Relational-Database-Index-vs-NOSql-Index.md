@@ -4,7 +4,7 @@
 
 ### **Relational Database Index**  
 - **Purpose**: Speeds up query performance by allowing quick lookups based on column values.  
-- **Structure**: Typically uses **B-trees** or **hashing** for indexing.  
+- **Structure**: Typically uses **B-trees(Balanced Tree)** or **hashing** for indexing.  
 - **Types**: 
   - **Primary Index**: Based on primary key.
   - **Secondary Index**: Based on other columns.
