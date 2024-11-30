@@ -1,67 +1,58 @@
 ### **Introduction to NoSQL Databases**
 
----
-
-### **What is NoSQL?**
-- **Definition**: NoSQL stands for **Not Only SQL** or **Non-relational** databases.
-- **Purpose**: Built to handle **unstructured or semi-structured data** and scale **horizontally** across many servers.
+NoSQL databases are **non-relational** and are used to store **unstructured or semi-structured data**. They are designed to scale easily across many servers.
 
 ---
 
-### **Types of NoSQL Databases**  
-1. **Document-based** (e.g., MongoDB, CouchDB)
-   - **Example**: Storing user profiles as JSON documents.
-   - **Real-Life Example**: An e-commerce site storing user orders, each with different products, quantities, and payment methods.
-   - **Visual Example**:  
-     ![MongoDB Document](https://miro.medium.com/max/1080/1*xXbt0pvZ0f8J2nMHTUbyGQ.png)  
-     (JSON document from MongoDB)
+### **Types of NoSQL Databases and Examples**
 
-2. **Key-Value Store** (e.g., Redis, DynamoDB)
-   - **Example**: Caching session data (username → session ID).
-   - **Real-Life Example**: A website storing logged-in user session info (key = user ID, value = session token).
-   - **Visual Example**:  
-     ![Redis Key-Value](https://redis.io/images/redis-key-value.svg)  
-     (Redis Key-Value Pair)
+1. **Document-based (e.g., MongoDB)**  
+   - Stores data in **JSON-like documents**.
+   - **Real-life Example**: E-commerce site storing **user orders**.
+   - **Example Document**:
+     ```json
+     {
+       "_id": "12345",
+       "user": "john_doe",
+       "order": [
+         {"item": "Laptop", "price": 1000},
+         {"item": "Mouse", "price": 25}
+       ],
+       "total": 1025
+     }
+     ```
 
-3. **Column-family Store** (e.g., Cassandra, HBase)
-   - **Example**: Storing time-series data (e.g., customer activity logs).
-   - **Real-Life Example**: Tracking the performance metrics of a web service (data grouped by columns like time, location, etc.).
-   - **Visual Example**:  
-     ![Cassandra Column Family](https://miro.medium.com/v2/resize:fit:1200/format:webp/1*QH2v4V87cBD7wpzpkxGnIQ.png)  
-     (Column-family structure from Cassandra)
+2. **Key-Value Store (e.g., Redis)**  
+   - Stores data as **key-value pairs**.
+   - **Real-life Example**: Session data for logged-in users.
+   - **Example Key-Value Pair**:
+     ```
+     Key: "session:12345"
+     Value: {"user": "john_doe", "cart": ["item1", "item2"]}
+     ```
 
-4. **Graph Database** (e.g., Neo4j, ArangoDB)
-   - **Example**: Storing data about connections and relationships.
-   - **Real-Life Example**: Social network (users connected via friends, likes, follows).
-   - **Visual Example**:  
-     ![Neo4j Graph](https://neo4j.com/docs/images/social_graph_example.png)  
-     (Graph representation of a social network)
+3. **Column-family Store (e.g., Cassandra)**  
+   - Stores data in **columns** rather than rows.
+   - **Real-life Example**: Storing time-series data, like **user activity logs**.
+   - **Example Table**:
+     | Timestamp          | User ID | Action    | Status |
+     |--------------------|---------|-----------|--------|
+     | 2023-11-01 10:00   | 001     | Login     | Success|
+     | 2023-11-01 10:05   | 002     | Purchase  | Success|
 
----
-
-### **Key Features of NoSQL Databases**
-- **Scalability**: Easily scale across multiple servers for high availability.
-- **Flexibility**: No fixed schema, ideal for rapidly evolving applications.
-- **Performance**: Optimized for large-scale, high-velocity data.
-
----
-
-### **Real-World Examples**  
-- **Social Media**:  
-   - **Graph Database** (e.g., **Neo4j**) stores relationships like friends, followers, and likes.
-   - **Document-based Database** (e.g., **MongoDB**) stores user posts with flexible attributes like text, images, and comments.
-   - **Visual Example**:  
-     ![Facebook Graph](https://upload.wikimedia.org/wikipedia/commons/9/91/Facebook_social_graph.jpg)  
-     (Graph of Facebook connections)
-
-- **E-commerce**:  
-   - **Document-based** (e.g., **MongoDB**) stores orders, products, and customer details.
-   - **Key-Value Store** (e.g., **Redis**) used for session management and real-time stock updates.
-   - **Visual Example**:  
-     ![E-Commerce Example](https://upload.wikimedia.org/wikipedia/commons/e/e3/E-commerce_database_model_example.png)  
-     (Database model for an e-commerce website)
+4. **Graph Database (e.g., Neo4j)**  
+   - Stores data as **graphs** with **nodes (entities)** and **edges (relationships)**.
+   - **Real-life Example**: Social media connections (friends, followers).
+   - **Example Graph**:  
+     - **Nodes**: `John`, `Alice`, `Bob`
+     - **Edges**: `John -> Alice (Friend)`, `Alice -> Bob (Follows)`
 
 ---
 
 ### **Summary**
-NoSQL databases are highly scalable, flexible, and efficient for handling diverse data types (e.g., social networks, e-commerce). They power many modern applications where data is large, fast-changing, and requires distributed systems.
+- **Document-based**: Stores flexible data (e.g., user orders in JSON).
+- **Key-Value**: Stores simple pairs (e.g., user session info).
+- **Column-family**: Stores data by columns (e.g., logs, time-series).
+- **Graph**: Stores relationships between entities (e.g., social network connections).
+
+These databases are highly scalable and used in real-time, big-data applications like social networks, e-commerce, and more.
